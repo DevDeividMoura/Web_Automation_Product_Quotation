@@ -168,6 +168,7 @@ currency_symbol = "R$"
 
 # create browser instance
 options = webdriver.ChromeOptions()
+## run to the browser instance covertly
 # options.add_argument("--headless")
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
