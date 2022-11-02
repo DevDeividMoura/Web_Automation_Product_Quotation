@@ -1,14 +1,13 @@
 # Web Automation Product Quotation
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/DevDeividMoura/Automated_Web_Product_Quote/blob/main/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/DevDeividMoura/Web_Automation_Product_Quotation/blob/main/LICENSE) 
 [![Python 3.10](https://img.shields.io/badge/python-v3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 
 # About the project
 
-video do projeto rodando
 
 ### Inspiration:
 
-- An employee who works in the purchasing area of ​​a company needs to make a comparison of suppliers for their inputs/products. At that time, the employee will constantly search the websites of these suppliers for the products available and the price, after all, each one of them can promote at different times and with different values.
+- An employee who works in the purchasing area of a company needs to make a comparison of suppliers for their inputs/products. At that time, the employee will constantly search the websites of these suppliers for the products available and the price, after all, each one of them can promote at different times and with different values.
 
 - Objective: If the value of the products is below a previously defined threshold price, the employee will discover the cheapest products and update this in a spreadsheet. It will then send an email with the list of products below its maximum purchase price to each employee in the shopping area.
 
@@ -37,37 +36,37 @@ video do projeto rodando
 
 :heavy_check_mark: `Functionality 4:` Plot progress bar tracking process enabling execution with hidden browser.
 
-## Aplicação
+## Application
 
-<div align="center">
 
-![Android Emulator](https://user-images.githubusercontent.com/37356058/135944390-ec96d4ec-ee43-4db9-882f-89be66aad23a.gif)
 
-  </div>
+https://user-images.githubusercontent.com/116500495/199385784-e847d892-f2f3-4bea-9fb0-37c36233c4a4.mp4
+
+
 
 ## Technologies used
 
 - Python v3.10
 - Selenium
 - Pandas
-- API Outlook (pywin32)
+- Smtplib (Automatic email sending by gmail)
 
-## Abrir e rodar o projeto
+## Open and run the project
 
-Após baixar o projeto, você precisara fazer alguns ajustes:
+After downloading the project, you will need to make some adjustments:
 
-- Primeiramente, abra o arquivo `search.xlsx` e adicione os produtos que pretende buscar;
+- First, open the `search.xlsx` file and add the products you want to search for;
 
-  • Na Coluna `Name` adicione os termos do nome do produto a buscar separados por um espaço simples;
+  • In Column `Name`, add the terms of the product name to be searched separated by a single space;
   
-  • Na Coluna `Banned Terms` adicione os termos que nao podem conter no nome do produto para evitar a busca do produto errado;
+  • In the Column `Banned Terms`, add the terms that cannot be contained in the product name to avoid searching for the wrong product;
   
-  • Na Coluna `Minimum Price` adicione o valor minimo a considerar para nao cair em golpes com valores muito baixos;
+  • In the Column `Minimum Price`, add the minimum value to consider so as not to fall into scams with very low values;
       
-  • Na Coluna `Maximum Price`  adicione o valor maximo a considerar na busca;
+  • In Column `Maximum Price`, add the maximum value to consider in the search;
   
-    Observação: O valor considerano no script esta em reais (BRL / R$) pois foi desenvolvido no Brasil, para rodar em outro pais basta
-    adicionar o valor de acordo com a moeda da sua localização e alterar a uma linha de codigo (atualmente n° 167) no arquivo `main.py` 
+    Note: The value considered in the script is in reais (BRL / R$) because it was developed in Brazil, to run in another country, just enter the value 
+    according to the currency of your location and change to a line of code (currently n° 167) in the `main.py` file
   
     ```python
     # currency symbol that will be considered in search results according to your location
@@ -75,22 +74,39 @@ Após baixar o projeto, você precisara fazer alguns ajustes:
     currency_symbol = "R$"
     ```
   
-- Logo após é necessario cadastrar os nomes e e-mail dos colaboradores que irão receber as ofertas, no arquivo `Send E-mails.xlsx`;
+- Soon after, it is necessary to register the names and e-mail of the collaborators who will receive the offers, in the file `Send E-mails.xlsx`;
 
-- Em Seguida voce devera cadastrar seu email do google (que sera usado como servidor) e sua senha para aplicativos no arquivo `Credentials.txt`, 
+- Then you must register your google email (which will be used as a server) and your password for applications in the `Credentials.txt` file,
 
-   • Veja como conseguir uma senha aqui: https://support.google.com/mail/answer/185833?hl=en;
+   • See how to get a password here: https://support.google.com/mail/answer/185833?hl=en;
 
-- Agora abra arquivo `main.py` (Recomenda-se a utilização da IDE PyCharm).
+- Now open the `main.py` file:
 
-  • Instale os requisitos via terminal terminal:
+  • Install requirements via terminal terminal:
     
-     ```python
-    
+     ```NET
     pip install -r requirements.txt
+    ```
+
+- Finally run the `main.py` file;
+  
+- After running the script a browser instance will open and you will see the search process, at the end of the process the script will save the search results in a file named `Offers.xlsx` and forward it via email to registered collaborators.
+
+## Final remarks:
+
+ - Depending on when you are running these Scripts, some site structures may have changed, thus needing to readjust the code to interact with the elements again;
+
+ - The script can be executed with the browser instance hidden, so just uncomment the next line of code (line n° 172) in the `main.py` file:
+    ```python
+    
+    ## run to the browser instance covertly
+    # options.add_argument("--headless")
     
     ```
 
-  • Por fim rode o arquivo `main.py`;
 
+## Autor
 
+Deivid Carvalho Moura
+
+https://www.linkedin.com/in/devdeividmoura
