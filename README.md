@@ -36,7 +36,7 @@
 
 :heavy_check_mark: `Functionality 4:` Plot progress bar tracking process enabling execution with hidden browser.
 
-## Application
+# Application
 
 
 
@@ -44,14 +44,14 @@ https://user-images.githubusercontent.com/116500495/199385784-e847d892-f2f3-4bea
 
 
 
-## Technologies used
+# Technologies used
 
 - Python v3.10
 - Selenium
 - Pandas
 - Smtplib (Automatic email sending by gmail)
 
-## Open and run the project
+# Open and run the project
 
 After downloading the project, you will need to make some adjustments:
 
@@ -92,7 +92,7 @@ After downloading the project, you will need to make some adjustments:
   
 - After running the script a browser instance will open and you will see the search process, at the end of the process the script will save the search results in a file named `Offers.xlsx` and forward it via email to registered collaborators.
 
-## Final remarks:
+# Final remarks:
 
  - Depending on when you are running these Scripts, some site structures may have changed, thus needing to readjust the code to interact with the elements again;
 
@@ -105,7 +105,7 @@ After downloading the project, you will need to make some adjustments:
     ```
 
 
-## Autor
+# Autor
 
 Deivid Carvalho Moura
 
