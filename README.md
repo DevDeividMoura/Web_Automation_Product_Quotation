@@ -1,4 +1,4 @@
-# Automatic Product Quotation
+# Web Automation Product Quotation
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/DevDeividMoura/Automated_Web_Product_Quote/blob/main/LICENSE) 
 [![Python 3.10](https://img.shields.io/badge/python-v3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 
@@ -52,6 +52,45 @@ video do projeto rodando
 - Pandas
 - API Outlook (pywin32)
 
+## Abrir e rodar o projeto
 
-run pip install -r requirements.txt
+Após baixar o projeto, você precisara fazer alguns ajustes:
+
+- Primeiramente, abra o arquivo `search.xlsx` e adicione os produtos que pretende buscar;
+
+  • Na Coluna `Name` adicione os termos do nome do produto a buscar separados por um espaço simples;
+  
+  • Na Coluna `Banned Terms` adicione os termos que nao podem conter no nome do produto para evitar a busca do produto errado;
+  
+  • Na Coluna `Minimum Price` adicione o valor minimo a considerar para nao cair em golpes com valores muito baixos;
+      
+  • Na Coluna `Maximum Price`  adicione o valor maximo a considerar na busca;
+  
+    Observação: O valor considerano no script esta em reais (BRL / R$) pois foi desenvolvido no Brasil, para rodar em outro pais basta
+    adicionar o valor de acordo com a moeda da sua localização e alterar a uma linha de codigo (atualmente n° 167) no arquivo `main.py` 
+  
+    ```python
+    # currency symbol that will be considered in search results according to your location
+    # to convert string price to float ex: R$, US$, €
+    currency_symbol = "R$"
+    ```
+  
+- Logo após é necessario cadastrar os nomes e e-mail dos colaboradores que irão receber as ofertas, no arquivo `Send E-mails.xlsx`;
+
+- Em Seguida voce devera cadastrar seu email do google (que sera usado como servidor) e sua senha para aplicativos no arquivo `Credentials.txt`, 
+
+   • Veja como conseguir uma senha aqui: https://support.google.com/mail/answer/185833?hl=en;
+
+- Agora abra arquivo `main.py` (Recomenda-se a utilização da IDE PyCharm).
+
+  • Instale os requisitos via terminal terminal:
+    
+     ```python
+    
+    pip install -r requirements.txt
+    
+    ```
+
+  • Por fim rode o arquivo `main.py`;
+
 
