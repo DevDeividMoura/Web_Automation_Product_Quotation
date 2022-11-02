@@ -4,6 +4,8 @@
 
 # About the project
 
+- This project aims to automate web searches as a way of optimizing processes within a company, increasing team productivity and effectively presenting fast and accurate results.
+
 
 ### Inspiration:
 
